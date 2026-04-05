@@ -1,0 +1,155 @@
+export const INITIAL_JOBS = [
+  {
+    id: "1",
+    title: "Senior AI Engineer",
+    isVerified: true,
+    category: "Engineering",
+    location: "Remote",
+    experience: "5-8 years",
+    type: "Full-time",
+    description:
+      "We are looking for a Senior AI Engineer to lead our machine learning initiatives and build scalable neural architectures for the future of recruitment...",
+    tags: ["Python", "PyTorch", "NLP"],
+    postedBy: "Sarah Jenkins",
+    date: "Oct 24, 2023",
+  },
+  {
+    id: "2",
+    title: "Product Designer",
+    isVerified: false,
+    category: "Design",
+    location: "San Francisco, CA",
+    experience: "3-5 years",
+    type: "Full-time",
+    description:
+      "Join our product team to redefine the candidate experience using generative UI and intuitive workflow automation...",
+    tags: ["Figma", "Prototyping", "UX Research"],
+    postedBy: "Michael Chen",
+    date: "Oct 22, 2023",
+  },
+  {
+    id: "3",
+    title: "DevOps Specialist",
+    isVerified: true,
+    category: "Infrastructure",
+    location: "London, UK",
+    experience: "4+ years",
+    type: "Contract",
+    description:
+      "Help us scale our cloud infrastructure to support millions of job seekers. Deep expertise in AWS and Terraform required...",
+    tags: ["AWS", "Docker", "K8s"],
+    postedBy: "Sarah Jenkins",
+    date: "Oct 20, 2023",
+  },
+  {
+    id: "4",
+    title: "Talent Acquisition Lead",
+    isVerified: false,
+    category: "People",
+    location: "New York, NY",
+    experience: "7+ years",
+    type: "Full-time",
+    description:
+      "Lead the charge in finding the world's best talent. You will be responsible for the end-to-end recruitment lifecycle and employer branding...",
+    tags: ["Recruiting", "HR Tech", "Management"],
+    postedBy: "David Wilson",
+    date: "Oct 18, 2023",
+  },
+  {
+    id: "5",
+    title: "Data Scientist",
+    isVerified: true,
+    category: "Data",
+    location: "Berlin, Germany",
+    experience: "2-4 years",
+    type: "Full-time",
+    description:
+      "Analyze massive datasets to extract insights that drive our platform's matching algorithms. Experience with SQL and Scikit-learn is key...",
+    tags: ["SQL", "Python", "Statistics"],
+    postedBy: "Michael Chen",
+    date: "Oct 15, 2023",
+  },
+  {
+    id: "6",
+    title: "Backend Architect",
+    isVerified: false,
+    category: "Engineering",
+    location: "Remote",
+    experience: "10+ years",
+    type: "Full-time",
+    description:
+      "Define the technical vision for our core services. We need someone who can handle high-concurrency systems and microservice architectures...",
+    tags: ["Go", "Kafka", "Redis"],
+    postedBy: "David Wilson",
+    date: "Oct 12, 2023",
+  },
+];
+
+export const MOCK_PROFILE = {
+  name: "Hardik Gupta",
+  role: "Java Backend Developer",
+  location: "Bangalore, India",
+  avatar:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBVNamlPKI_EeofQ684niCdjtuVhzp9wh7P9jNdQOsScZlE9Dui2iSPgSB-R_yjnDTjDC2XmOBjZLrd2ZbO1UyGPY6bl8IL7hxPHY5-sGQF7-jcR_caEQcHMLtKY6pUjDYmURpBHSgRJvK6fKzo3FrxtDld4xC7o_5ptOpzxWjSVFiu5P9OpoZqZtLJatoyNCMAFHWZmyN6sTQxtCKROvuggXnuR5eKRPcpcxst60PXBAAiurlFHDXUozhC77IBqHo3fOn7aFGcvTs",
+  totalExperience: 4,
+  availability: "Immediate",
+  expectedCTC: "₹18,00,000 PA",
+  summary:
+    "Passionate Java Backend Developer with 4 years of hands-on experience in building scalable web applications and microservices. Expertise in Java 11+, Spring Framework, and cloud-native development. Proven track record of optimizing database performance and implementing robust security protocols using Spring Security and OAuth2.",
+  skills: [
+    "Java",
+    "Spring Boot",
+    "Spring Security",
+    "Hibernate",
+    "MySQL",
+    "REST APIs",
+    "Microservices",
+    "Docker",
+  ],
+  education: [
+    {
+      id: "edu1",
+      degree: "B.Tech Computer Science",
+      institution: "Indian Institute of Technology",
+      period: "2016 — 2020",
+    },
+  ],
+  certifications: [
+    {
+      id: "cert1",
+      name: "Oracle Certified Java Programmer",
+      issuer: "Oracle University",
+      date: "Issued: Oct 2021",
+    },
+  ],
+  experience: [
+    {
+      id: "exp1",
+      title: "Senior Java Developer",
+      company: "TechNova Solutions",
+      period: "Jul 2022 — Present",
+      description: [
+        "Leading a team of 4 developers in migrating a monolithic banking application to Microservices architecture.",
+        "Reduced system latency by 40% through optimized caching strategies with Redis.",
+        "Implemented CI/CD pipelines using GitLab CI, reducing deployment time by 50%.",
+      ],
+    },
+    {
+      id: "exp2",
+      title: "Backend Developer",
+      company: "CloudStream Inc.",
+      period: "Jun 2020 — Jun 2022",
+      description: [
+        "Developed core RESTful APIs for a high-traffic e-commerce platform using Spring Boot.",
+        "Managed relational database design and complex queries using MySQL and Hibernate.",
+        "Collaborated with frontend teams to integrate UI components with backend logic.",
+      ],
+    },
+  ],
+  matchPercentage: 94,
+  aiInsights: [
+    "Expert level proficiency in Spring Boot.",
+    "Consistent career growth in last 4 years.",
+  ],
+  highestEducation: "B.Tech Computer Science",
+};
