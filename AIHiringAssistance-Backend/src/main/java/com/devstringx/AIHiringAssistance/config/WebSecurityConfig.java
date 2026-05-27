@@ -44,9 +44,14 @@ public class WebSecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
+                                org.springframework.http.HttpMethod.OPTIONS,
+                                "/**"
+                        ).permitAll()
+                        .requestMatchers(
                                 "/api/auth/register",
                                 "/api/auth/login",
-                                "/api/auth/refreshToken"
+                                "/api/auth/refreshToken",
+                                "/error"
                         ).permitAll()
                         .requestMatchers("/ai-generate").hasAnyRole( "HR")
                         .anyRequest().authenticated()
@@ -60,22 +65,20 @@ public class WebSecurityConfig {
         return httpSecurity.build();
     }
 
-
-    // ✅ CORS Configuration Source
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-
-        // ✅ Allow your React frontend
-        configuration.setAllowedOrigins(List.of("http://localhost:5173","https://ai-hiring-assistant-73fa.vercel.app"));
-        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        configuration.setAllowedHeaders(List.of("Authorization", "Content-Type"));
+        configuration.setAllowedOrigins(List.of(
+                "http://localhost:5173",
+                "https://ai-hiring-assistant-73fa.vercel.app"
+        ));
+        configuration.setAllowedMethods(List.of("*"));
+        configuration.setAllowedHeaders(List.of("*"));
         configuration.setExposedHeaders(List.of("Authorization"));
         configuration.setAllowCredentials(true);
-
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        UrlBasedCorsConfigurationSource source =
+                new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
-
         return source;
     }
 
