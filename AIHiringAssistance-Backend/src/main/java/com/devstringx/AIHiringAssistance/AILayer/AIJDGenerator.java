@@ -19,9 +19,6 @@ public class AIJDGenerator {
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
 
-    @Value("${openrouter.api.key}")
-    private String openRouterKey;
-
     // 🟢 ADDED
     @Value("${gemini.api.key}")
     private String geminiApiKey;
@@ -29,10 +26,7 @@ public class AIJDGenerator {
     // 🟢 ADDED
     @Value("${gemini.api.url}")
     private String geminiApiUrl;
-
-//    private static final String OPENROUTER_URL =
-//            "https://openrouter.ai/api/v1/chat/completions";
-
+    
     public AIGeneratedJDResponse generateStructuredJD(String prompt) {
 
         try {
