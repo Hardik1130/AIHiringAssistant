@@ -11,6 +11,7 @@ const Header = () => {
   const { searchQuery, setSearchQuery } = useSearch();
   const [menuOpen, setMenuOpen] = useState(false);
   const [postOpen, setPostOpen] = useState(false);
+   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // close dropdown when clicking outside
   React.useEffect(() => {
