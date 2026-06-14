@@ -192,11 +192,53 @@ const Header = () => {
             {postOpen && <PostJob onClose={() => setPostOpen(false)} />}
 
             {/* Mobile Menu */}
-            <button className="md:hidden p-2 text-gray-600 dark:text-gray-300">
-              <span className="material-symbols-outlined">menu</span>
+            <button
+              onClick={() => {
+                console.log("BURGER CLICKED");
+                setMobileMenuOpen(prev => !prev);
+              }}
+              className="md:hidden p-2 text-gray-600 dark:text-gray-300"
+            >
+              <span className="material-symbols-outlined">
+                {mobileMenuOpen ? "close" : "menu"}
+              </span>
             </button>
+            
           </div>
         </div>
+
+        {mobileMenuOpen && (
+          <div
+            style={{
+              position: "fixed",
+              top: "70px",
+              right: "20px",
+              zIndex: 999999,
+              background: "white",
+              border: "1px solid #ddd",
+              borderRadius: "8px",
+              width: "200px",
+              boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+            }}
+          >
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  display: "block",
+                  padding: "12px",
+                  borderBottom: "1px solid #eee",
+                  textDecoration: "none",
+                  color: "#333",
+                }}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </header>
   );
