@@ -24,6 +24,7 @@ public class CandidateProfile {
 
     private Integer totalExperience;
 
+    @Column(name = "current_designation")
     private String currentRole;
 
     private String highestEducation;
