@@ -69,6 +69,7 @@ public class WebSecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of(
+                "https://ai-hiring-assistant-six.vercel.app",
                 "http://localhost:5173",
                 "https://ai-hiring-assistant-73fa.vercel.app"
         ));
